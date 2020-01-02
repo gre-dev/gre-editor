@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GRE Editor</title>
+</head>
+<body>
+
+    <textarea id="theeditor" name="myt"></textarea>
+
+<script src="jquery.js"></script>
+<script src="gre-editor.js"></script>
+<script>
+$(document).ready(() => {
+    $('#theeditor').greEditor({
+        features: ['bold','italic','underline','heading','strikeThrough','list','numberlist','increaseFontSize','decreaseFontSize','quote','code','fullscreen','insertimage','link','unlink','insertvideo','alignLeft','alignCenter','alignRight','textBackColor','textColor','emoji','table','pageSource','justify','hr'],
+        forceAlt: true,
+        height: 400
+    });
+});
+</script>
+</body>
+</html>
