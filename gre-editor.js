@@ -10,20 +10,341 @@
             features: ['bold', 'italic', 'underline', 'textcolor','strikethrough'],
             forceAlt: false,
             forceLinkTitle: false,
-            onLoad: null
+            onLoad: null,
+            lang: 'en'
         }, options);
 
 
         return this.each(() => {
             var emojies = ['😀', '😆', '😅', '😂', '🤣', '😊', '😇', '😍', '🥰', '😉', '😘', '😚', '😋', '🤓', '🧐', '😎', '😏', '😒', '😞', '😔', '🥺', '😩', '😣', '😢', '😭', '😤', '😡', '🤬', '🤯', '🤲', '👐', '🙌', '👏', '🤑', '🤝', '👍', '👎', '👊', '✊', '🤛', '🤜', '🤞', '✌️', '🤟', '🤘', '👌', '🤏', '👈', '👉', '👆', '👇', '☝️', '✋', '🤚', '🤚', '🖐️', '🖖', '👋', '🤙', '💪', '🖕', '✍️', '🙏', '🦶', '🦵', '💋', '👩‍💻', '👨‍💻', '🙋‍♂️', '🙋', '🤦', '🤦‍♂️', '🤷‍♀️', '🤷‍♂️', '🚶‍♂️', '🏃', '💐', '🌷', '🌹', '🥀', '🌺', '🌸', '💥', '🔥', '🌟', '🐵', '🙈', '🙉', '🙊', '🐒', '🐵', '🐸', '🍒', '🍑', '🥝', '🍌', '🍋', '🍳', '🥉', '🏅', '🎖️', '🥈', '🥇', '🚗', '🚕', '🚙', '🌠', '💊', '💉', '❤️', '🧡', '💛', '💚', '💙', '💜', '🖤', '🤎', '🤍', '💔', '❣️', '💕', '💞', '💓', '💗', '💖', '💘', '💝', '⌚', '📱', '📲', '💻', '⌨️', '🖥️', '🖨️', '🖱️', '🖲️', '🕹️', '🗜️', '💽', '💾', '💿', '📀', '📼', '📷', '📸', '📹', '🎥', '📽️', '🎞️', '📞', '☎️', '📟', '📠', '📺', '📻', '🎙️', '🎚️', '🎛️', '🧭', '⏱️', '⏲️', '⏰', '🕰️', '⌛', '⏳', '📡', '🔋', '🔌', '💡', '🔦', '🕯️', '🧯', '🛢️', '💸', '💵', '💴', '💶', '💷', '💰', '🔞', '❗', '❕', '❓', '❔', '⚠️', '🔰', '✅', '🚫', '📛', '⛔', '❌', '💯', '⚪', '⚫', '🔴', '🔵', '🟤', '🟣', '🟢', '🟡', '🔺', '🟠', '🎵', '🎶', '➕', '➖', '➗', '✖️', '♾️', '💲', '💱', '🌐', '♻️'];
 
+            const lang = {
+                en: {
+                    noNameAttr: 'You have to set "name" to the textarea.',
+                    fewFeatures: 'You have to set at least 5 features to run this plugin.',
+                    heading: 'Heading',
+                    text: 'Normal',
+                    h1: 'Heading 1',
+                    h2: 'Heading 2',
+                    h3: 'Heading 3',
+                    h4: 'Heading 4',
+                    h5: 'Heading 5',
+                    h6: 'Heading 6',
+                    bold: 'Bold',
+                    italic: 'Italic',
+                    underline: 'Underline',
+                    strikethrough: 'Strike Through',
+                    alignleft: 'Align Left',
+                    aligncenter: 'Align Center',
+                    alignright: 'Align Right',
+                    alignjustify: 'Align Justify',
+                    increasefontsize: 'Font Size +',
+                    decreasefontsize: 'Font Size -',
+                    textbackgroundcolor: 'Text Background Color',
+                    textcolor: 'Text Color',
+                    unorderedlist: 'Unordered List',
+                    orderedlist: 'Ordered List',
+                    createlink: 'Create Link',
+                    destroylink: 'Destroy Link',
+                    inserttable: 'Insert Table',
+                    insertimage: 'Insert Image',
+                    insertvideo: 'Insert Video',
+                    quote: 'Quote',
+                    insertcode: 'Insert Code',
+                    insertemoji: 'Insert Emoji',
+                    inserthr: 'Insert Horizontal Line',
+                    viewpagesource: 'View Page Source',
+                    fullscreenmode: 'Fullscreen Mode',
+                    normalmode: 'Normal Mode',
+                    about: 'About',
+                    imageurl: 'Image URL',
+                    describetheimage: 'Describe the image',
+                    width: 'Width',
+                    height: 'Height',
+                    setimagedauto: 'Set image dimensions automatically.',
+                    insert: 'Insert',
+                    cancel: 'Cancel',
+                    youtubeurl: 'Youtube URL',
+                    setvideodauto: 'Set video dimensions automatically.',
+                    url: 'URL',
+                    title: 'Title',
+                    openinanewwindow: 'Open in a new window.'
+                },
+                ar: {
+                    noNameAttr: 'يجب عليك إستخدام الـ "name" لوسم الـ textarea.',
+                    fewFeatures: 'يجب إستخدام 5 خواص كحد ادنى من خلال تعليمة "features".',
+                    heading: 'عنوان',
+                    text: 'نص عادي',
+                    h1: 'عنوان أول',
+                    h2: 'عنوان ثاني',
+                    h3: 'عنوان ثالث',
+                    h4: 'عنوان رابع',
+                    h5: 'عنوان خامس',
+                    h6: 'عنوان سادس',
+                    bold: 'خط عريض',
+                    italic: 'خط مائل',
+                    underline: 'خط تحت الكتابة',
+                    strikethrough: 'كتابة مشطوبة',
+                    alignleft: 'محاذاة لليسار',
+                    aligncenter: 'محاذاة للوسط',
+                    alignright: 'محاذاة لليمين',
+                    alignjustify: 'محاذاة بالتساوي',
+                    increasefontsize: 'زيادة حجم الخط',
+                    decreasefontsize: 'تقليل حجم الخط',
+                    textbackgroundcolor: 'لون خلفية النص',
+                    textcolor: 'لون الخط',
+                    unorderedlist: 'تنقيط',
+                    orderedlist: 'ترقيم',
+                    createlink: 'إنشاء رابط',
+                    destroylink: 'إلغاء رابط',
+                    inserttable: 'إدراج جدول',
+                    insertimage: 'إدراج صورة',
+                    insertvideo: 'إدراج فيديو',
+                    quote: 'إقتباس',
+                    insertcode: 'إدراج كود',
+                    insertemoji: 'إدراج ملصق',
+                    inserthr: 'إدراج خط فاصل',
+                    viewpagesource: 'الكود المصدري',
+                    fullscreenmode: 'وضع كامل الشاشة',
+                    normalmode: 'الوضع العادي',
+                    about: 'معلومات',
+                    imageurl: 'رابط الصورة',
+                    describetheimage: 'أكتب وصف للصورة',
+                    width: 'العرض',
+                    height: 'الطول',
+                    setimagedauto: 'ضبط أبعاد الصورة تلقائياً.',
+                    insert: 'إدراج',
+                    cancel: 'إلغاء',
+                    youtubeurl: 'رابط اليوتيوب',
+                    setvideodauto: 'ضبط أبعاد الفيديو تلقائياً.',
+                    url: 'الرابط',
+                    title: 'وصف الرابط',
+                    openinanewwindow: 'فتح في صفحة جديدة.'
+                },
+                tr: {
+                    noNameAttr: '"Textarea" için "name" ayarlamanız gerekir.',
+                    fewFeatures: 'Bu eklentiyi çalıştırmak için en az 5 "features" ayarlamanız gerekir.',
+                    heading: 'Başlık',
+                    text: 'Normal',
+                    h1: 'Başlık 1',
+                    h2: 'Başlık 2',
+                    h3: 'Başlık 3',
+                    h4: 'Başlık 4',
+                    h5: 'Başlık 5',
+                    h6: 'Başlık 6',
+                    bold: 'Kalın',
+                    italic: 'İtalik',
+                    underline: 'Altı Çizili',
+                    strikethrough: 'Üstü Çizili',
+                    alignleft: 'Sola Hizala',
+                    aligncenter: 'Ortala',
+                    alignright: 'Sağa Hizala',
+                    alignjustify: 'İki yana yasla',
+                    increasefontsize: 'Yazı tipi boyutunu büyüt',
+                    decreasefontsize: 'Yazı tipi boyutunu küçültme',
+                    textbackgroundcolor: 'Metin Arka Plan Rengi',
+                    textcolor: 'Metin Rengi',
+                    unorderedlist: 'Sırasız liste',
+                    orderedlist: 'Sıralı liste',
+                    createlink: 'Bağlantı ekle',
+                    destroylink: 'Bağlantıyı kaldır',
+                    inserttable: 'Tablo ekle',
+                    insertimage: 'Resim ekle',
+                    insertvideo: 'Video ekle',
+                    quote: 'Alıntı',
+                    insertcode: 'Kod ekle',
+                    insertemoji: 'İfadeler',
+                    inserthr: 'Yatay çizgi ekleme',
+                    viewpagesource: 'Kod görünümü',
+                    fullscreenmode: 'Tam ekran mod',
+                    normalmode: 'Normal mod',
+                    about: 'Hakkında',
+                    imageurl: 'Resimi bağlantısı',
+                    describetheimage: 'Resimi açıklayın',
+                    width: 'Genişlik',
+                    height: 'Yükseklik',
+                    setimagedauto: 'Resimi boyutlarını otomatik olarak ayarlayın.',
+                    insert: 'Ekle',
+                    cancel: 'İptal',
+                    youtubeurl: 'Youtube video bağlantısı',
+                    setvideodauto: 'Video boyutlarını otomatik olarak ayarlayın.',
+                    url: 'Bağlantı',
+                    title: 'Başlık',
+                    openinanewwindow: 'Yeni bir pencerede aç.'
+                },
+                de: {
+                    noNameAttr: 'Sie müssen "name" auf "textarea" setzen.',
+                    fewFeatures: 'Sie müssen mindestens 5 "features" einstellen, um dieses Plugin ausführen zu können.',
+                    heading: 'formatierung',
+                    text: 'Normal',
+                    h1: 'Überschrift 1',
+                    h2: 'Überschrift 2',
+                    h3: 'Überschrift 3',
+                    h4: 'Überschrift 4',
+                    h5: 'Überschrift 5',
+                    h6: 'Überschrift 6',
+                    bold: 'Fett',
+                    italic: 'Kursiv',
+                    underline: 'Unterstrichen',
+                    strikethrough: 'Durchgestrichen',
+                    alignleft: 'Linksbündig ausrichten',
+                    aligncenter: 'Zentriert ausrichten',
+                    alignright: 'Rechtsbündig ausrichten',
+                    alignjustify: 'Blocksatz',
+                    increasefontsize: 'Schriftgröße vergrößern',
+                    decreasefontsize: 'Schrift verkleinern',
+                    textbackgroundcolor: 'Texthintergrundfarbe',
+                    textcolor: 'Textfarbe',
+                    unorderedlist: 'Unnummerierte liste',
+                    orderedlist: 'Nummerierte liste',
+                    createlink: 'Link einfügen',
+                    destroylink: 'Link entfernen',
+                    inserttable: 'Tabelle einfügen',
+                    insertimage: 'Bild einfügen',
+                    insertvideo: 'Video einfügen',
+                    quote: 'Einzug vergrößern',
+                    insertcode: 'Code einfügen',
+                    insertemoji: 'Emoticons',
+                    inserthr: 'Horizontale Linie einfügen',
+                    viewpagesource: 'Code-Ansicht',
+                    fullscreenmode: 'Vollbild',
+                    normalmode: 'Vollbild',
+                    about: 'Über',
+                    imageurl: 'Bild-Link',
+                    describetheimage: 'Beschreibe das Bild',
+                    width: 'Breite',
+                    height: 'Höhe',
+                    setimagedauto: 'Bildmaße automatisch einstellen.',
+                    insert: 'Einfügen',
+                    cancel: 'Stornieren',
+                    youtubeurl: 'Youtube Link',
+                    setvideodauto: 'Stellen Sie die Video Dimensionen automatisch ein.',
+                    url: 'Link',
+                    title: 'Titel',
+                    openinanewwindow: 'In einem neuen Fenster öffnen.'
+                },
+                fa: {
+                    noNameAttr: 'شما باید "name" را روی "textarea" تنظیم کنید.',
+                    fewFeatures: 'برای اجرای این افزونه شما باید حداقل 5 "features" را تنظیم کنید.',
+                    heading: 'قالب',
+                    text: 'طبیعی',
+                    h1: 'سر‌صفحه 1',
+                    h2: 'سر‌صفحه 2',
+                    h3: 'سر‌صفحه 3',
+                    h4: 'سر‌صفحه 4',
+                    h5: 'سر‌صفحه 5',
+                    h6: 'سر‌صفحه 6',
+                    bold: 'ضخیم',
+                    italic: 'خط کج',
+                    underline: 'خط زیر',
+                    strikethrough: 'خط خورده',
+                    alignleft: 'چپ چین',
+                    aligncenter: 'وسط چین',
+                    alignright: 'راست چین',
+                    alignjustify: 'مساوی از طرفین',
+                    increasefontsize: 'اندازه قلم را افزایش دهید',
+                    decreasefontsize: 'اندازه قلم را کاهش دهید',
+                    textbackgroundcolor: 'رنگ پس زمینه متن',
+                    textcolor: 'رنگ متن',
+                    unorderedlist: 'لیست دایره ای',
+                    orderedlist: 'لیست شماره ای',
+                    createlink: 'اضافه کردن لینک',
+                    destroylink: 'حذف لینک',
+                    inserttable: 'اضافه کردن جدول',
+                    insertimage: 'اضافه کردن تصویر',
+                    insertvideo: 'اضافه کردن فایل تصویری',
+                    quote: 'نقل قول',
+                    insertcode: 'کد را وارد کنید',
+                    insertemoji: 'شکلک ها',
+                    inserthr: 'قرار دادن افقی خط',
+                    viewpagesource: 'مشاهده کد',
+                    fullscreenmode: 'حالت تمام صفحه',
+                    normalmode: 'حالت عادی',
+                    about: 'در باره',
+                    imageurl: 'لینک تصویر',
+                    describetheimage: 'تصویر را توصیف کنید',
+                    width: 'عرض',
+                    height: 'قد',
+                    setimagedauto: 'ابعاد تصویر را بطور خودکار تنظیم کنید.',
+                    insert: 'درج کنید',
+                    cancel: 'لغو',
+                    youtubeurl: 'لینک یوتیوب',
+                    setvideodauto: 'ابعاد فیلم را بطور خودکار تنظیم کنید.',
+                    url: 'لینک',
+                    title: 'عنوان',
+                    openinanewwindow: 'در یک پنجره جدید باز کنید.'
+                },
+                fr: {
+                    noNameAttr: 'Vous devez définir "name" dans la "textarea".',
+                    fewFeatures: 'Vous devez définir au moins 5 "features" pour exécuter ce plugin.',
+                    heading: 'Format de paragraphe',
+                    text: 'Normal',
+                    h1: 'Titre 1',
+                    h2: 'Titre 2',
+                    h3: 'Titre 3',
+                    h4: 'Titre 4',
+                    h5: 'Titre 5',
+                    h6: 'Titre 6',
+                    bold: 'Gras',
+                    italic: 'Italique',
+                    underline: 'Souligné',
+                    strikethrough: 'Barré',
+                    alignleft: 'Aligner à gauche',
+                    aligncenter: 'Aligner au centre',
+                    alignright: 'Aligner à droite',
+                    alignjustify: 'Justifier',
+                    increasefontsize: 'Taille de police +',
+                    decreasefontsize: 'Taille de police -',
+                    textbackgroundcolor: 'Couleur d\'arrière-plan du texte',
+                    textcolor: 'Couleur du texte',
+                    unorderedlist: 'Liste non ordonnée',
+                    orderedlist: 'Liste ordonnée',
+                    createlink: 'Insérer un lien',
+                    destroylink: 'Enlever le lien',
+                    inserttable: 'Insérer un tableau',
+                    insertimage: 'Insérer une image',
+                    insertvideo: 'Insérer une vidéo',
+                    quote: 'Citation',
+                    insertcode: 'Insérer un code',
+                    insertemoji: 'Émoticônes',
+                    inserthr: 'Insérer une ligne horizontale',
+                    viewpagesource: 'Mode HTML',
+                    fullscreenmode: 'Mode plein écran',
+                    normalmode: 'Mode normal',
+                    about: 'Sur',
+                    imageurl: 'Lien d\'image',
+                    describetheimage: 'Décrivez l\'image',
+                    width: 'Largeur',
+                    height: 'La taille',
+                    setimagedauto: 'Définissez automatiquement les dimensions de l\'image.',
+                    insert: 'Insérer',
+                    cancel: 'Annuler',
+                    youtubeurl: 'Lien Youtube',
+                    setvideodauto: 'Définissez automatiquement les dimensions de la vidéo.',
+                    url: 'Lien',
+                    title: 'Titre',
+                    openinanewwindow: 'Ouvre dans une nouvelle fenêtre.'
+                }
+            }
+
+            var langCore;
+            if (settings.lang == 'en'){
+                var langCore = lang.en;
+            }else if (settings.lang == 'ar'){
+                var langCore = lang.ar;
+            }else{
+                console.error('Invalid "lang" option.');
+                status = false;
+            }
+            
+
             if ($(this).attr('name') == '' || $(this).attr('name') == 'undefined' || $(this).attr('name') == null || $(this).attr('name') == undefined) {
-                console.error('You have to set "name" to the textarea.');
+                console.error(langCore.noNameAttr);
                 status = false;
             }
 
             if (settings.features.length < 5) {
-                console.error('You have to set at least 5 features to run this plugin.');
+                console.error(langCore.fewFeatures);
                 status = false;
             }
 
@@ -32,90 +353,105 @@
                 $(this).remove();
 
                 $('#main-gre-editor').css('position', 'relative');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    $('#main-gre-editor').attr('dir', 'rtl');
+                }
                 $('#main-gre-editor').css('box-sizing', 'border-box');
                 $('#main-gre-editor').css('-webkit-box-sizing', 'border-box');
 
                 $('#main-gre-editor').prepend('<div id="gre-editor-toolbar"></div>');
 
                 if (settings.features.includes('heading')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" title="Heading" id="headingbtn"></a><div id="headingdropdown" style="display:none;"><a href="javascript:void(0)" id="htext">Text</a><hr/><a href="javascript:void(0)" id="hone">Heading 1</a><a href="javascript:void(0)" id="htwo">Heading 2</a><a href="javascript:void(0)" id="hthree">Heading 3</a><a href="javascript:void(0)" id="hfour">Heading 4</a><a href="javascript:void(0)" id="hfive">Heading 5</a><a href="javascript:void(0)" id="hsix">Heading 6</a></div>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" title="'+langCore.heading+'" id="headingbtn"><div id="headingdropdown" style="display:none;"><a href="javascript:void(0)" id="htext">'+langCore.text+'</a><hr/><a href="javascript:void(0)" id="hone">'+langCore.h1+'</a><a href="javascript:void(0)" id="htwo">'+langCore.h2+'</a><a href="javascript:void(0)" id="hthree">'+langCore.h3+'</a><a href="javascript:void(0)" id="hfour">'+langCore.h4+'</a><a href="javascript:void(0)" id="hfive">'+langCore.h5+'</a><a href="javascript:void(0)" id="hsix">'+langCore.h6+'</a></div></a>');
                 }
                 if (settings.features.includes('bold')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="boldbtn" title="Bold"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="boldbtn" title="'+langCore.bold+'"></a>');
                 }
                 if (settings.features.includes('italic')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="italicbtn" title="Italic"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="italicbtn" title="'+langCore.italic+'"></a>');
                 }
                 if (settings.features.includes('underline')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="underlinebtn" title="Underline"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="underlinebtn" title="'+langCore.underline+'"></a>');
                 }
                 if (settings.features.includes('strikeThrough')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="strikethroughbtn" title="Strike Through"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="strikethroughbtn" title="'+langCore.strikethrough+'"></a>');
                 }
-                if (settings.features.includes('alignLeft')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="alignleftbtn" title="Align Left"></a>');
-                }
-                if (settings.features.includes('alignCenter')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="aligncenterbtn" title="Align Center"></a>');
-                }
-                if (settings.features.includes('alignRight')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="alignrightbtn" title="Align Right"></a>');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    if (settings.features.includes('alignRight')) {
+                        $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="alignrightbtn" title="'+langCore.alignright+'"></a>');
+                    }
+                    if (settings.features.includes('alignCenter')) {
+                        $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="aligncenterbtn" title="'+langCore.aligncenter+'"></a>');
+                    }
+                    if (settings.features.includes('alignLeft')) {
+                        $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="alignleftbtn" title="'+langCore.alignleft+'"></a>');
+                    }
+                }else{
+                    if (settings.features.includes('alignLeft')) {
+                        $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="alignleftbtn" title="'+langCore.alignleft+'"></a>');
+                    }
+                    if (settings.features.includes('alignCenter')) {
+                        $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="aligncenterbtn" title="'+langCore.aligncenter+'"></a>');
+                    }
+                    if (settings.features.includes('alignRight')) {
+                        $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="alignrightbtn" title="'+langCore.alignright+'"></a>');
+                    }
                 }
                 if (settings.features.includes('justify')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="justifybtn" title="Justify"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="justifybtn" title="'+langCore.alignjustify+'"></a>');
                 }
                 if (settings.features.includes('increaseFontSize')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="increaseFontSizebtn" title="Font Size +"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="increaseFontSizebtn" title="'+langCore.increasefontsize+'"></a>');
                 }
                 if (settings.features.includes('decreaseFontSize')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="decreaseFontSizebtn" title="Font Size -"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="decreaseFontSizebtn" title="'+langCore.decreasefontsize+'"></a>');
                 }
                 if (settings.features.includes('textBackColor')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="textbackcolorbtn" title="Text Background Color"><div id="backgroundcolordropdown"></div></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="textbackcolorbtn" title="'+langCore.textbackgroundcolor+'"><div id="backgroundcolordropdown"></div></a>');
                 }
                 if (settings.features.includes('textColor')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="textcolorbtn" title="Text Color"><div id="textcolordropdown"></div></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="textcolorbtn" title="'+langCore.textcolor+'"><div id="textcolordropdown"></div></a>');
                 }
                 if (settings.features.includes('list')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="listbtn" title="Unordered List"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="listbtn" title="'+langCore.unorderedlist+'"></a>');
                 }
                 if (settings.features.includes('numberlist')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="numberlistbtn" title="Ordered List"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="numberlistbtn" title="'+langCore.orderedlist+'"></a>');
                 }
                 if (settings.features.includes('link')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="linkbtn" title="Create Link"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="linkbtn" title="'+langCore.createlink+'"></a>');
                 }
                 if (settings.features.includes('unlink')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="unlinkbtn" title="Destroy Link"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="unlinkbtn" title="'+langCore.destroylink+'"></a>');
                 }
                 if (settings.features.includes('table')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="tablebtn" title="Insert Table"><div id="tabledropdown"></div></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="tablebtn" title="'+langCore.inserttable+'"><div id="tabledropdown"></div></a>');
                 }
                 if (settings.features.includes('insertimage')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="insertimagebtn" title="Insert Image"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="insertimagebtn" title="'+langCore.insertimage+'"></a>');
                 }
                 if (settings.features.includes('insertvideo')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="insertvideobtn" title="Insert Video"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="insertvideobtn" title="'+langCore.insertvideo+'"></a>');
                 }
                 if (settings.features.includes('quote')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="quotebtn" title="Quote"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="quotebtn" title="'+langCore.quote+'"></a>');
                 }
                 if (settings.features.includes('code')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="codebtn" title="Insert Code"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="codebtn" title="'+langCore.insertcode+'"></a>');
                 }
                 if (settings.features.includes('emoji')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="emojibtn" title="Insert Emoji"><div id="emojidropdown"></div></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="emojibtn" title="'+langCore.insertemoji+'"><div id="emojidropdown"></div></a>');
                 }
                 if (settings.features.includes('hr')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="hrbtn" title="Insert Horizontal Line"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="hrbtn" title="'+langCore.inserthr+'"></a>');
                 }
                 if (settings.features.includes('pageSource')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="htmlbtn" title="View Page Source"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="htmlbtn" title="'+langCore.viewpagesource+'"></a>');
                 }
                 if (settings.features.includes('fullscreen')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="fullscreenbtn" title="Fullscreen Mode"></a>');
+                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="fullscreenbtn" title="'+langCore.fullscreenmode+'"></a>');
                 }
-                $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="infobtn" title="About"></a>');
+                $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="infobtn" title="'+langCore.about+'"></a>');
 
 
 
@@ -163,7 +499,11 @@
                 $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('background-color', 'rgb(245, 245, 245)');
                 $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('position', 'absolute');
                 $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('top', '31px');
-                $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('left', '10px');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('right', '10px');
+                }else{
+                    $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('left', '10px');
+                }
                 $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('width', '150px');
                 $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('height', 'auto');
                 $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').css('text-align', 'center');
@@ -237,6 +577,7 @@
                 // About pup-up window
                 $('#main-gre-editor').append('<div id="main-gre-info"></div>');
                 $('#main-gre-editor').children('#main-gre-info').css('display', 'none');
+                $('#main-gre-editor').children('#main-gre-info').attr('dir', 'ltr');
                 $('#main-gre-editor').children('#main-gre-info').css('width', 400);
                 $('#main-gre-editor').children('#main-gre-info').css('z-index', '3');
                 $('#main-gre-editor').children('#main-gre-info').css('border-radius', '3px');
@@ -250,9 +591,22 @@
                 $('#main-gre-editor').children('#main-gre-info').css('padding', '20px');
                 $('#main-gre-editor').children('#main-gre-info').css('box-sizing', 'border-box');
                 $('#main-gre-editor').children('#main-gre-info').css('-webkit-box-sizing', 'border-box');
-                $('#main-gre-editor').children('#main-gre-info').append('<div style="color:#333;font-size:25px;font-family:sans-serif;font-weight:bold;text-align:center;">GRE Editor</div>');
+                $('#main-gre-editor').children('#main-gre-info').append('<div id="closeabout" style="color:#333;font-size:25px;font-family:sans-serif;font-weight:bold;text-align:center;">x</div>');
+                $('#main-gre-editor').children('#main-gre-info').find('#closeabout').css('position', 'absolute');
+                $('#main-gre-editor').children('#main-gre-info').find('#closeabout').css('top', '10px');
+                $('#main-gre-editor').children('#main-gre-info').find('#closeabout').css('left', '15px');
+                $('#main-gre-editor').children('#main-gre-info').find('#closeabout').css('cursor', 'pointer');
+                $('#main-gre-editor').children('#main-gre-info').find('#closeabout').css('padding', '5px 10px');
+                $('#main-gre-editor').children('#main-gre-info').find('#closeabout').css('color', '#888');
+
+                $('#main-gre-editor').children('#main-gre-info').append('<br><div style="color:#333;font-size:25px;font-family:sans-serif;font-weight:bold;text-align:center;">GRE Editor</div>');
                 $('#main-gre-editor').children('#main-gre-info').append('<div style="color:#333;font-size:15px;margin-top:10px;font-family:sans-serif;">A jQuery plugin made by <a href="https://www.gredev.net/en" style="text-decoration:none;color:#e92f42;" target="_BLANK">GRE Development</a> for helping web developers to make the Rich Text Editor feature easy and quick.</div><br>');
                 $('#main-gre-editor').children('#main-gre-info').append('<div style="color:#333;font-size:15px;margin-top:10px;font-family:sans-serif;">This is an open source project with <a href="https://choosealicense.com/licenses/mit/" style="text-decoration:none;color:#e92f42;" target="_BLANK">MIT License<a> published on <a href="https://github.com/gre-dev/gre-editor" style="text-decoration:none;color:#e92f42;" target="_BLANK">Github</a>.</div>');
+
+                $('#main-gre-editor').find('#closeabout').click(() => {
+                    $('#main-gre-editor').find('#main-gre-info').slideToggle(100);
+                    $('#main-gre-editor').children('#gre-blur').hide(1);
+                });
 
 
 
@@ -273,14 +627,22 @@
                 $('#main-gre-editor').children('#main-gre-insert-image').css('padding', '20px');
                 $('#main-gre-editor').children('#main-gre-insert-image').css('box-sizing', 'border-box');
                 $('#main-gre-editor').children('#main-gre-insert-image').css('-webkit-box-sizing', 'border-box');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<div style="color:#333;font-size:25px;font-family:sans-serif;">Insert Image</div>');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="text" id="insert-image-url" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="Image URL">');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="text" id="insert-image-alt" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="Describe the image">');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="number" min="0" id="insert-image-width" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:5px;" placeholder="Width">');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="number" min="0" id="insert-image-height" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;" placeholder="Height">');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<label style="font-family:sans-serif;"><input checked="checked" type="checkbox" style="color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;">Set image dimension automatically.</label>');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<br><button name="insert" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">Insert</button>');
-                $('#main-gre-editor').children('#main-gre-insert-image').append('<button name="cancel" style="display:inline-block;color:#333;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;font-size:17px;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">Cancel</button>');
+                $('#main-gre-editor').children('#main-gre-insert-image').append('<div style="color:#333;font-size:25px;font-family:sans-serif;">'+langCore.insertimage+'</div>');
+                $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="text" id="insert-image-url" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="'+langCore.imageurl+'">');
+                $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="text" id="insert-image-alt" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="'+langCore.describetheimage+'">');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="number" min="0" id="insert-image-width" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-left:5px;" placeholder="'+langCore.width+'">');
+                }else{
+                    $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="number" min="0" id="insert-image-width" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:5px;" placeholder="'+langCore.width+'">');
+                }
+                $('#main-gre-editor').children('#main-gre-insert-image').append('<input type="number" min="0" id="insert-image-height" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;" placeholder="'+langCore.height+'">');
+                $('#main-gre-editor').children('#main-gre-insert-image').append('<label style="font-family:sans-serif;"><input checked="checked" type="checkbox" style="color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;">'+langCore.setimagedauto+'</label>');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    $('#main-gre-editor').children('#main-gre-insert-image').append('<br><button name="insert" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-left:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.insert+'</button>');
+                }else{
+                    $('#main-gre-editor').children('#main-gre-insert-image').append('<br><button name="insert" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.insert+'</button>');
+                }
+                $('#main-gre-editor').children('#main-gre-insert-image').append('<button name="cancel" style="display:inline-block;color:#333;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;font-size:17px;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.cancel+'</button>');
 
 
 
@@ -302,12 +664,16 @@
                 $('#main-gre-editor').children('#main-gre-insert-link').css('padding', '20px');
                 $('#main-gre-editor').children('#main-gre-insert-link').css('box-sizing', 'border-box');
                 $('#main-gre-editor').children('#main-gre-insert-link').css('-webkit-box-sizing', 'border-box');
-                $('#main-gre-editor').children('#main-gre-insert-link').append('<div style="color:#333;font-size:25px;font-family:sans-serif;">Create Link</div>');
-                $('#main-gre-editor').children('#main-gre-insert-link').append('<input type="text" id="insert-url-url" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="URL">');
-                $('#main-gre-editor').children('#main-gre-insert-link').append('<input type="text" id="insert-url-title" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="Title">');
-                $('#main-gre-editor').children('#main-gre-insert-link').append('<label style="font-family:sans-serif;"><input checked="checked" type="checkbox" style="color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;">Open in a new wendow.</label>');
-                $('#main-gre-editor').children('#main-gre-insert-link').append('<br><button name="create" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">Insert</button>');
-                $('#main-gre-editor').children('#main-gre-insert-link').append('<button name="cancel" style="display:inline-block;color:#333;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;font-size:17px;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">Cancel</button>');
+                $('#main-gre-editor').children('#main-gre-insert-link').append('<div style="color:#333;font-size:25px;font-family:sans-serif;">'+langCore.createlink+'</div>');
+                $('#main-gre-editor').children('#main-gre-insert-link').append('<input type="text" id="insert-url-url" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="'+langCore.url+'">');
+                $('#main-gre-editor').children('#main-gre-insert-link').append('<input type="text" id="insert-url-title" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="'+langCore.title+'">');
+                $('#main-gre-editor').children('#main-gre-insert-link').append('<label style="font-family:sans-serif;"><input checked="checked" type="checkbox" style="color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;">'+langCore.openinanewwindow+'</label>');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    $('#main-gre-editor').children('#main-gre-insert-link').append('<br><button name="create" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-left:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.insert+'</button>');
+                }else{
+                    $('#main-gre-editor').children('#main-gre-insert-link').append('<br><button name="create" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.insert+'</button>');
+                }
+                $('#main-gre-editor').children('#main-gre-insert-link').append('<button name="cancel" style="display:inline-block;color:#333;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;font-size:17px;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.cancel+'</button>');
 
 
 
@@ -334,13 +700,21 @@
                 $('#main-gre-editor').children('#main-gre-insert-video').css('padding', '20px');
                 $('#main-gre-editor').children('#main-gre-insert-video').css('box-sizing', 'border-box');
                 $('#main-gre-editor').children('#main-gre-insert-video').css('-webkit-box-sizing', 'border-box');
-                $('#main-gre-editor').children('#main-gre-insert-video').append('<div style="color:#333;font-size:25px;font-family:sans-serif;">Insert Video</div>');
-                $('#main-gre-editor').children('#main-gre-insert-video').append('<input type="text" id="insert-video-url" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="Youtube URL">');
-                $('#main-gre-editor').children('#main-gre-insert-video').append('<input type="number" min="0" id="insert-video-width" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:5px;" placeholder="Width">');
-                $('#main-gre-editor').children('#main-gre-insert-video').append('<input type="number" min="0" id="insert-video-height" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;" placeholder="Height">');
-                $('#main-gre-editor').children('#main-gre-insert-video').append('<label style="font-family:sans-serif;"><input checked="checked" type="checkbox" style="color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;">Open in a new wendow.</label>');
-                $('#main-gre-editor').children('#main-gre-insert-video').append('<br><button name="insert" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">Insert</button>');
-                $('#main-gre-editor').children('#main-gre-insert-video').append('<button name="cancel" style="display:inline-block;color:#333;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;font-size:17px;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">Cancel</button>');
+                $('#main-gre-editor').children('#main-gre-insert-video').append('<div style="color:#333;font-size:25px;font-family:sans-serif;">'+langCore.insertvideo+'</div>');
+                $('#main-gre-editor').children('#main-gre-insert-video').append('<input type="text" id="insert-video-url" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;" placeholder="'+langCore.youtubeurl+'">');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    $('#main-gre-editor').children('#main-gre-insert-video').append('<input type="number" min="0" id="insert-video-width" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-left:5px;" placeholder="'+langCore.width+'">');
+                }else{
+                    $('#main-gre-editor').children('#main-gre-insert-video').append('<input type="number" min="0" id="insert-video-width" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:5px;" placeholder="'+langCore.width+'">');
+                }
+                $('#main-gre-editor').children('#main-gre-insert-video').append('<input type="number" min="0" id="insert-video-height" disabled="disabled" style="font-family:sans-serif;color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;width:calc(46% - 0.25px);outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;" placeholder="'+langCore.height+'">');
+                $('#main-gre-editor').children('#main-gre-insert-video').append('<label style="font-family:sans-serif;"><input checked="checked" type="checkbox" style="color:#333;font-size:17px;font-family:sans-serif;padding:5px;border-radius:3px;border:1px solid #aaa;margin-top:10px;">'+langCore.openinanewwindow+'</label>');
+                if (settings.lang == 'ar' || settings.lang == 'fa'){
+                    $('#main-gre-editor').children('#main-gre-insert-video').append('<br><button name="insert" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-left:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.insert+'</button>');
+                }else{
+                    $('#main-gre-editor').children('#main-gre-insert-video').append('<br><button name="insert" style="color:#333;font-size:17px;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;margin-right:10px;display:inline-block;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.insert+'</button>');
+                }
+                $('#main-gre-editor').children('#main-gre-insert-video').append('<button name="cancel" style="display:inline-block;color:#333;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;font-size:17px;font-family:sans-serif;padding:5px 15px;border-radius:3px;border:1px solid #aaa;margin-top:10px;cursor:pointer;">'+langCore.cancel+'</button>');
 
 
 
@@ -541,8 +915,13 @@
                         node.unwrap();
                     } else {
                         format('formatBlock', 'blockquote');
-                        $('#main-gre-editor').find('blockquote').css('border-left', '2px solid #aaa');
-                        $('#main-gre-editor').find('blockquote').css('padding-left', '10px');
+                        if (settings.lang == 'ar' || settings.lang == 'fa'){
+                            $('#main-gre-editor').find('blockquote').css('border-right', '2px solid #aaa');
+                            $('#main-gre-editor').find('blockquote').css('padding-right', '10px');
+                        }else{
+                            $('#main-gre-editor').find('blockquote').css('border-left', '2px solid #aaa');
+                            $('#main-gre-editor').find('blockquote').css('padding-left', '10px');
+                        }
                     }
                 });
 
@@ -572,6 +951,7 @@
                         $('#main-gre-editor').css('border-radius', 'unset');
                         $('#main-gre-editor').css('z-index', '999999999999999999');
                         $('#main-gre-editor').find('#fullscreenbtn').css('background', 'url("css_sprites.png") -118px -26px');
+                        $('#main-gre-editor').find('#fullscreenbtn').attr('title', langCore.normalmode);
                     } else {
                         $('#main-gre-editor').css('position', 'relative');
                         $('#main-gre-editor').css('min-width', '550px');
@@ -582,6 +962,7 @@
                         $('#main-gre-editor').css('border-radius', '2px');
                         $('#main-gre-editor').css('z-index', '1');
                         $('#main-gre-editor').find('#fullscreenbtn').css('background', 'url("css_sprites.png") -118px -3px');
+                        $('#main-gre-editor').find('#fullscreenbtn').attr('title', langCore.fullscreenmode);
                     }
                 });
 
@@ -941,6 +1322,7 @@
                 $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').append('<table><thead><tr><th class=""></th><th class=""></th><th class=""></th><th class=""></th><th class=""></th><th class=""></th></tr></thead><tbody><tr><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr></tbody></table>');
                 $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').attr('title', '');
                 $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').css('display', 'none');
+                $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').attr('dir', 'ltr');
                 $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').css('z-index', '2');
                 $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').css('position', 'absolute');
                 $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').css('top', '25px');
@@ -1038,9 +1420,17 @@
                     $('#main-gre-editor').children('#lab').find('table').find('thead').find('tr').find('th').css('padding', '8px');
                     $('#main-gre-editor').children('#lab').find('table').find('thead').find('tr').find('th').css('border', '1px solid #FFF');
                     $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td').css('padding', '8px');
-                    $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td').css('border-right', '1px solid #eee');
+                    if (settings.lang == 'ar' || settings.lang == 'fa'){
+                        $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td').css('border-left', '1px solid #eee');
+                    }else{
+                        $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td').css('border-right', '1px solid #eee');
+                    }
                     $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td').css('border-bottom', '1px solid #eee');
-                    $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td:last-child').css('border-right', 'unset');
+                    if (settings.lang == 'ar' || settings.lang == 'fa'){
+                        $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td:last-child').css('border-left', 'unset');
+                    }else{
+                        $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr').find('td:last-child').css('border-right', 'unset');
+                    }
                     $('#main-gre-editor').children('#lab').find('table').find('tbody').find('tr:last-child').find('td').css('border-bottom', 'unset');
 
 
@@ -1165,6 +1555,9 @@
                         if (!checkBox.is(':checked')) {
                             newVideo.width = width;
                             newVideo.height = height;
+                        }else{
+                            newVideo.width = '400px';
+                            newVideo.height = '300px';
                         }
                         document.getElementById('video-place-' + lastVideoCursor).parentNode.replaceChild(newVideo, document.getElementById('video-place-' + lastVideoCursor));
                         $('#main-gre-editor').children('#main-gre-insert-video').find('input[id="insert-video-url"]').val('');
