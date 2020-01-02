@@ -10,8 +10,8 @@
             features: ['bold', 'italic', 'underline', 'textcolor','strikethrough'],
             forceAlt: false,
             forceLinkTitle: false,
-            onLoad: null,
-            lang: 'en'
+            lang: 'en',
+            onLoad: null
         }, options);
 
 
@@ -28,10 +28,10 @@
                     h4: 'Heading 4',
                     h5: 'Heading 5',
                     h6: 'Heading 6',
-                    bold: 'Bold',
-                    italic: 'Italic',
-                    underline: 'Underline',
-                    strikethrough: 'Strike Through',
+                    bold: 'Bold (Ctrl+B)',
+                    italic: 'Italic (Ctrl+I)',
+                    underline: 'Underline (Ctrl+U)',
+                    strikethrough: 'Strike Through (Ctrl+S)',
                     alignleft: 'Align Left',
                     aligncenter: 'Align Center',
                     alignright: 'Align Right',
@@ -42,10 +42,10 @@
                     textcolor: 'Text Color',
                     unorderedlist: 'Unordered List',
                     orderedlist: 'Ordered List',
-                    createlink: 'Create Link',
+                    createlink: 'Create Link (Ctrl+K)',
                     destroylink: 'Destroy Link',
                     inserttable: 'Insert Table',
-                    insertimage: 'Insert Image',
+                    insertimage: 'Insert Image (Ctrl+P)',
                     insertvideo: 'Insert Video',
                     quote: 'Quote',
                     insertcode: 'Insert Code',
@@ -77,10 +77,10 @@
                     h4: 'عنوان رابع',
                     h5: 'عنوان خامس',
                     h6: 'عنوان سادس',
-                    bold: 'خط عريض',
-                    italic: 'خط مائل',
-                    underline: 'خط تحت الكتابة',
-                    strikethrough: 'كتابة مشطوبة',
+                    bold: 'خط عريض (Ctrl+B)',
+                    italic: 'خط مائل (Ctrl+I)',
+                    underline: 'خط تحت الكتابة (Ctrl+U)',
+                    strikethrough: 'كتابة مشطوبة (Ctrl+S)',
                     alignleft: 'محاذاة لليسار',
                     aligncenter: 'محاذاة للوسط',
                     alignright: 'محاذاة لليمين',
@@ -91,10 +91,10 @@
                     textcolor: 'لون الخط',
                     unorderedlist: 'تنقيط',
                     orderedlist: 'ترقيم',
-                    createlink: 'إنشاء رابط',
+                    createlink: 'إنشاء رابط (Ctrl+K)',
                     destroylink: 'إلغاء رابط',
                     inserttable: 'إدراج جدول',
-                    insertimage: 'إدراج صورة',
+                    insertimage: 'إدراج صورة (Ctrl+P)',
                     insertvideo: 'إدراج فيديو',
                     quote: 'إقتباس',
                     insertcode: 'إدراج كود',
@@ -126,10 +126,10 @@
                     h4: 'Başlık 4',
                     h5: 'Başlık 5',
                     h6: 'Başlık 6',
-                    bold: 'Kalın',
-                    italic: 'İtalik',
-                    underline: 'Altı Çizili',
-                    strikethrough: 'Üstü Çizili',
+                    bold: 'Kalın (Ctrl+B)',
+                    italic: 'İtalik (Ctrl+I)',
+                    underline: 'Altı Çizili (Ctrl+U)',
+                    strikethrough: 'Üstü Çizili (Ctrl+S)',
                     alignleft: 'Sola Hizala',
                     aligncenter: 'Ortala',
                     alignright: 'Sağa Hizala',
@@ -140,10 +140,10 @@
                     textcolor: 'Metin Rengi',
                     unorderedlist: 'Sırasız liste',
                     orderedlist: 'Sıralı liste',
-                    createlink: 'Bağlantı ekle',
+                    createlink: 'Bağlantı ekle (Ctrl+K)',
                     destroylink: 'Bağlantıyı kaldır',
                     inserttable: 'Tablo ekle',
-                    insertimage: 'Resim ekle',
+                    insertimage: 'Resim ekle (Ctrl+P)',
                     insertvideo: 'Video ekle',
                     quote: 'Alıntı',
                     insertcode: 'Kod ekle',
@@ -175,10 +175,10 @@
                     h4: 'Überschrift 4',
                     h5: 'Überschrift 5',
                     h6: 'Überschrift 6',
-                    bold: 'Fett',
-                    italic: 'Kursiv',
-                    underline: 'Unterstrichen',
-                    strikethrough: 'Durchgestrichen',
+                    bold: 'Fett (Ctrl+B)',
+                    italic: 'Kursiv (Ctrl+I)',
+                    underline: 'Unterstrichen (Ctrl+U)',
+                    strikethrough: 'Durchgestrichen (Ctrl+S)',
                     alignleft: 'Linksbündig ausrichten',
                     aligncenter: 'Zentriert ausrichten',
                     alignright: 'Rechtsbündig ausrichten',
@@ -189,10 +189,10 @@
                     textcolor: 'Textfarbe',
                     unorderedlist: 'Unnummerierte liste',
                     orderedlist: 'Nummerierte liste',
-                    createlink: 'Link einfügen',
+                    createlink: 'Link einfügen (Ctrl+K)',
                     destroylink: 'Link entfernen',
                     inserttable: 'Tabelle einfügen',
-                    insertimage: 'Bild einfügen',
+                    insertimage: 'Bild einfügen (Ctrl+P)',
                     insertvideo: 'Video einfügen',
                     quote: 'Einzug vergrößern',
                     insertcode: 'Code einfügen',
@@ -224,10 +224,10 @@
                     h4: 'سر‌صفحه 4',
                     h5: 'سر‌صفحه 5',
                     h6: 'سر‌صفحه 6',
-                    bold: 'ضخیم',
-                    italic: 'خط کج',
-                    underline: 'خط زیر',
-                    strikethrough: 'خط خورده',
+                    bold: 'ضخیم (Ctrl+B)',
+                    italic: 'خط کج (Ctrl+I)',
+                    underline: 'خط زیر (Ctrl+U)',
+                    strikethrough: 'خط خورده (Ctrl+S)',
                     alignleft: 'چپ چین',
                     aligncenter: 'وسط چین',
                     alignright: 'راست چین',
@@ -238,10 +238,10 @@
                     textcolor: 'رنگ متن',
                     unorderedlist: 'لیست دایره ای',
                     orderedlist: 'لیست شماره ای',
-                    createlink: 'اضافه کردن لینک',
+                    createlink: 'اضافه کردن لینک (Ctrl+K)',
                     destroylink: 'حذف لینک',
                     inserttable: 'اضافه کردن جدول',
-                    insertimage: 'اضافه کردن تصویر',
+                    insertimage: 'اضافه کردن تصویر (Ctrl+P)',
                     insertvideo: 'اضافه کردن فایل تصویری',
                     quote: 'نقل قول',
                     insertcode: 'کد را وارد کنید',
@@ -273,10 +273,10 @@
                     h4: 'Titre 4',
                     h5: 'Titre 5',
                     h6: 'Titre 6',
-                    bold: 'Gras',
-                    italic: 'Italique',
-                    underline: 'Souligné',
-                    strikethrough: 'Barré',
+                    bold: 'Gras (Ctrl+B)',
+                    italic: 'Italique (Ctrl+I)',
+                    underline: 'Souligné (Ctrl+U)',
+                    strikethrough: 'Barré (Ctrl+S)',
                     alignleft: 'Aligner à gauche',
                     aligncenter: 'Aligner au centre',
                     alignright: 'Aligner à droite',
@@ -287,10 +287,10 @@
                     textcolor: 'Couleur du texte',
                     unorderedlist: 'Liste non ordonnée',
                     orderedlist: 'Liste ordonnée',
-                    createlink: 'Insérer un lien',
+                    createlink: 'Insérer un lien (Ctrl+K)',
                     destroylink: 'Enlever le lien',
                     inserttable: 'Insérer un tableau',
-                    insertimage: 'Insérer une image',
+                    insertimage: 'Insérer une image (Ctrl+P)',
                     insertvideo: 'Insérer une vidéo',
                     quote: 'Citation',
                     insertcode: 'Insérer un code',
@@ -560,6 +560,11 @@
                 }
             }
 
+            if (typeof settings.lang != 'string'){
+                console.error('"lang" should be a string.');
+                status = false;
+            }
+
             var langCore;
             if (settings.lang == 'en'){
                 var langCore = lang.en;
@@ -587,7 +592,37 @@
                 console.error('Invalid "lang" option.');
                 status = false;
             }
-            
+
+
+            if (typeof settings.width != 'number'){
+                console.error('"width" should be a number (integer).');
+                status = false;
+            }
+
+            if (typeof settings.height != 'number'){
+                console.error('"height" should be a number (integer).');
+                status = false;
+            }
+
+            if (typeof settings.features != 'object'){
+                console.error('"features" should be an array.');
+                status = false;
+            }
+
+            if (typeof settings.forceAlt != 'boolean'){
+                console.error('"forceAlt" should be a boolean value (true or false).');
+                status = false;
+            }
+
+            if (typeof settings.forceLinkTitle != 'boolean'){
+                console.error('"forceLinkTitle" should be a boolean value (true or false).');
+                status = false;
+            }
+
+            if (typeof settings.onLoad != 'function' && settings.onLoad != null){
+                console.error('"onLoad" should be a function.');
+                status = false;
+            }
 
             if ($(this).attr('name') == '' || $(this).attr('name') == 'undefined' || $(this).attr('name') == null || $(this).attr('name') == undefined) {
                 console.error('You have to set "name" to the textarea.');
@@ -1273,14 +1308,14 @@
 
 
                 $('#main-gre-editor').find('#headingbtn').click(() => {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').slideToggle(150);
+                    $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').slideToggle(100);
                     hideAllMenues('headingdropdown');
                 });
 
                 var lastImgCursor;
                 $('#main-gre-editor').find('#insertimagebtn').click(() => {
                     $('#main-gre-editor').children('#gre-blur').show(1);
-                    $('#main-gre-editor').children('#main-gre-insert-image').slideToggle(150);
+                    $('#main-gre-editor').children('#main-gre-insert-image').slideToggle(100);
                     var rand = Math.floor(Math.random() * 1001);
                     document.execCommand('insertHTML', false, '<span id="image-place-' + rand + '"></span>');
                     lastImgCursor = rand;
@@ -1289,7 +1324,7 @@
                 var lastVideoCursor;
                 $('#main-gre-editor').find('#insertvideobtn').click(() => {
                     $('#main-gre-editor').children('#gre-blur').show(1);
-                    $('#main-gre-editor').children('#main-gre-insert-video').slideToggle(150);
+                    $('#main-gre-editor').children('#main-gre-insert-video').slideToggle(100);
                     var rand = Math.floor(Math.random() * 1001);
                     document.execCommand('insertHTML', false, '<span id="video-place-' + rand + '"></span>');
                     lastVideoCursor = rand;
@@ -1299,7 +1334,7 @@
                 var lastSelectedText;
                 $('#main-gre-editor').find('#linkbtn').click(() => {
                     $('#main-gre-editor').children('#gre-blur').show(1);
-                    $('#main-gre-editor').children('#main-gre-insert-link').slideToggle(150);
+                    $('#main-gre-editor').children('#main-gre-insert-link').slideToggle(100);
                     lastSelectedText = (document.getSelection().anchorNode.nodeValue && document.getSelection().anchorNode.nodeValue != null) ? document.getSelection().anchorNode.nodeValue : '';
                     var rand = Math.floor(Math.random() * 1001);
                     document.execCommand('insertHTML', false, '<span id="link-place-' + rand + '">' + lastSelectedText + '</span>');
@@ -1308,24 +1343,12 @@
 
                 $('#main-gre-editor').find('#infobtn').click(() => {
                     $('#main-gre-editor').children('#gre-blur').show(1);
-                    $('#main-gre-editor').children('#main-gre-info').slideToggle(150);
+                    $('#main-gre-editor').children('#main-gre-info').slideToggle(100);
                 });
-
-                var lastTableNode;
-                $('#main-gre-editor').find('#linkbtn').click(() => {
-                    $('#main-gre-editor').children('#gre-blur').show(1);
-                    $('#main-gre-editor').children('#main-gre-insert-Table').slideToggle(150);
-                    lastSelectedText = (document.getSelection().anchorNode.nodeValue && document.getSelection().anchorNode.nodeValue != null) ? document.getSelection().anchorNode.nodeValue : '';
-                    var rand = Math.floor(Math.random() * 1001);
-                    document.execCommand('insertHTML', false, '<span id="table-place-' + rand + '">' + lastSelectedText + '</span>');
-                    lastLinkNode = rand;
-                });
-
 
                 $('#main-gre-editor').children('#lab').click(() => {
                     hideAllMenues();
                 });
-
 
                 $('#main-gre-editor').children('#lab').bind("DOMSubtreeModified", function () {
                     var myTextArea = document.getElementById('maincode');
@@ -1420,7 +1443,7 @@
                         $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-url"]').css('border', '1px solid #aaa');
                         $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-alt"]').css('border', '1px solid #aaa');
                         $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-height"]').css('border', '1px solid #aaa');
-                        $('#main-gre-editor').children('#main-gre-insert-image').slideToggle(150);
+                        $('#main-gre-editor').children('#main-gre-insert-image').slideToggle(100);
                         $('#main-gre-editor').children('#gre-blur').hide(1);
                     }
                 });
@@ -1433,12 +1456,15 @@
                     $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-width"]').prop("disabled", true);
                     $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-height"]').prop("disabled", true);
                     $('#main-gre-editor').children('#main-gre-insert-image').find('input[type="checkbox"]').prop("checked", true);
-                    $('#main-gre-editor').children('#main-gre-insert-image').slideToggle(150);
+                    $('#main-gre-editor').children('#main-gre-insert-image').slideToggle(100);
                     $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-width"]').css('border', '1px solid #aaa');
                     $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-url"]').css('border', '1px solid #aaa');
                     $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-alt"]').css('border', '1px solid #aaa');
                     $('#main-gre-editor').children('#main-gre-insert-image').find('input[id="insert-image-height"]').css('border', '1px solid #aaa');
                     $('#main-gre-editor').children('#gre-blur').hide(1);
+                    var textNode = document.createTextNode('');
+                    document.getElementById('image-place-' + lastImgCursor).parentNode.replaceChild(textNode, document.getElementById('image-place-' + lastImgCursor));
+                    lastImgCursor = '';
                 });
 
 
@@ -1808,7 +1834,7 @@
                         $('#main-gre-editor').children('#main-gre-insert-link').find('input[type="checkbox"]').prop("checked", true);
                         $('#main-gre-editor').children('#main-gre-insert-link').find('input[id="insert-url-url"]').css('border', '1px solid #aaa');
                         $('#main-gre-editor').children('#main-gre-insert-link').find('input[id="insert-url-title"]').css('border', '1px solid #aaa');
-                        $('#main-gre-editor').children('#main-gre-insert-link').slideToggle(150);
+                        $('#main-gre-editor').children('#main-gre-insert-link').slideToggle(100);
                         $('#main-gre-editor').children('#gre-blur').hide(1);
                     }
                 });
@@ -1819,8 +1845,12 @@
                     $('#main-gre-editor').children('#main-gre-insert-link').find('input[type="checkbox"]').prop("checked", true);
                     $('#main-gre-editor').children('#main-gre-insert-link').find('input[id="insert-url-url"]').css('border', '1px solid #aaa');
                     $('#main-gre-editor').children('#main-gre-insert-link').find('input[id="insert-url-title"]').css('border', '1px solid #aaa');
-                    $('#main-gre-editor').children('#main-gre-insert-link').slideToggle(150);
+                    $('#main-gre-editor').children('#main-gre-insert-link').slideToggle(100);
                     $('#main-gre-editor').children('#gre-blur').hide(1);
+                    var textNode = document.createTextNode(lastSelectedText);
+                    document.getElementById('link-place-' + lastLinkNode).parentNode.replaceChild(textNode, document.getElementById('link-place-' + lastLinkNode));
+                    lastLinkNode = '';
+                    lastSelectedText = '';
                 });
 
 
@@ -1894,7 +1924,7 @@
                         $('#main-gre-editor').children('#main-gre-insert-video').find('input[id="insert-video-url"]').css('border', '1px solid #aaa');
                         $('#main-gre-editor').children('#main-gre-insert-video').find('input[id="insert-video-width"]').css('border', '1px solid #aaa');
                         $('#main-gre-editor').children('#main-gre-insert-video').find('input[id="insert-video-height"]').css('border', '1px solid #aaa');
-                        $('#main-gre-editor').children('#main-gre-insert-video').slideToggle(150);
+                        $('#main-gre-editor').children('#main-gre-insert-video').slideToggle(100);
                         $('#main-gre-editor').children('#gre-blur').hide(1);
                     }
                 });
@@ -1907,8 +1937,11 @@
                     $('#main-gre-editor').children('#main-gre-insert-video').find('input[id="insert-video-url"]').css('border', '1px solid #aaa');
                     $('#main-gre-editor').children('#main-gre-insert-video').find('input[id="insert-video-width"]').css('border', '1px solid #aaa');
                     $('#main-gre-editor').children('#main-gre-insert-video').find('input[id="insert-video-height"]').css('border', '1px solid #aaa');
-                    $('#main-gre-editor').children('#main-gre-insert-video').slideToggle(150);
+                    $('#main-gre-editor').children('#main-gre-insert-video').slideToggle(100);
                     $('#main-gre-editor').children('#gre-blur').hide(1);
+                    var textNode = document.createTextNode('');
+                    document.getElementById('video-place-' + lastVideoCursor).parentNode.replaceChild(textNode, document.getElementById('video-place-' + lastVideoCursor));
+                    lastVideoCursor = '';
                 });
 
 
@@ -1967,7 +2000,7 @@
 
 
 
-
+                
 
 
                 // Some functions
@@ -2043,15 +2076,24 @@
     };
 
 
+    $(window).bind('keydown', function(event) {
+        if (event.ctrlKey || event.metaKey) {
+            switch (String.fromCharCode(event.which).toLowerCase()) {
+            case 's':
+                event.preventDefault();
+                $('#main-gre-editor').find('#strikethroughbtn').click();
+                break;
+            case 'p':
+                event.preventDefault();
+                $('#main-gre-editor').find('#insertimagebtn').click();
+                break;
+            case 'k':
+                event.preventDefault();
+                $('#main-gre-editor').find('#linkbtn').click();
+                break;
+            }
+        }
+    });
+
     
-    jQuery.expr.filters.offscreen = function(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.x - 1 < 0 
-            || (rect.y) < 0
-            || (rect.x > window.innerWidth || rect.y > window.innerHeight)
-        );
-    };
-
-
 }(jQuery));
