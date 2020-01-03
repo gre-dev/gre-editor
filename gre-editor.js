@@ -2113,9 +2113,11 @@
 
     $(window).bind('keydown', function(e) {
         if (e.keyCode == 13) {
-            e.preventDefault();
-            document.execCommand('insertText', false, '\n');
-            return false;
+            if ($('#main-gre-editor').is(':focus')){
+                e.preventDefault();
+                document.execCommand('insertText', false, '\n');
+                return false;
+            }
         }
     });
 
