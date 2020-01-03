@@ -635,7 +635,7 @@
             }
 
             if (status) {
-                $('<div id="main-gre-editor"><div id="lab"></div><textarea id="maincode" name="' + $(this).attr('name') + '">'+$(this).html()+'</textarea></div>').insertBefore($(this));
+                $('<div id="main-gre-editor"><div id="lab"></div><textarea id="maincode" name="' + $(this).attr('name') + '">'+decodeHTML($(this).html())+'</textarea></div>').insertBefore($(this));
                 $(this).remove();
 
                 var editorElement = $('#main-gre-editor');
