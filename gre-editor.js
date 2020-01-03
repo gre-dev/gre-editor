@@ -16,7 +16,7 @@
 
 
         return this.each(() => {
-            var emojies = ['😀', '😆', '😅', '😂', '🤣', '😊', '😇', '😍', '🥰', '😉', '😘', '😚', '😋', '🤓', '🧐', '😎', '😏', '😒', '😞', '😔', '🥺', '😩', '😣', '😢', '😭', '😤', '😡', '🤬', '🤯', '🤲', '👐', '🙌', '👏', '🤑', '🤝', '👍', '👎', '👊', '✊', '🤛', '🤜', '🤞', '✌️', '🤟', '🤘', '👌', '🤏', '👈', '👉', '👆', '👇', '☝️', '✋', '🤚', '🤚', '🖐️', '🖖', '👋', '🤙', '💪', '🖕', '✍️', '🙏', '🦶', '🦵', '💋', '👩‍💻', '👨‍💻', '🙋‍♂️', '🙋', '🤦', '🤦‍♂️', '🤷‍♀️', '🤷‍♂️', '🚶‍♂️', '🏃', '💐', '🌷', '🌹', '🥀', '🌺', '🌸', '💥', '🔥', '🌟', '🐵', '🙈', '🙉', '🙊', '🐒', '🐵', '🐸', '🍒', '🍑', '🥝', '🍌', '🍋', '🍳', '🥉', '🏅', '🎖️', '🥈', '🥇', '🚗', '🚕', '🚙', '🌠', '💊', '💉', '❤️', '🧡', '💛', '💚', '💙', '💜', '🖤', '🤎', '🤍', '💔', '❣️', '💕', '💞', '💓', '💗', '💖', '💘', '💝', '⌚', '📱', '📲', '💻', '⌨️', '🖥️', '🖨️', '🖱️', '🖲️', '🕹️', '🗜️', '💽', '💾', '💿', '📀', '📼', '📷', '📸', '📹', '🎥', '📽️', '🎞️', '📞', '☎️', '📟', '📠', '📺', '📻', '🎙️', '🎚️', '🎛️', '🧭', '⏱️', '⏲️', '⏰', '🕰️', '⌛', '⏳', '📡', '🔋', '🔌', '💡', '🔦', '🕯️', '🧯', '🛢️', '💸', '💵', '💴', '💶', '💷', '💰', '🔞', '❗', '❕', '❓', '❔', '⚠️', '🔰', '✅', '🚫', '📛', '⛔', '❌', '💯', '⚪', '⚫', '🔴', '🔵', '🟤', '🟣', '🟢', '🟡', '🔺', '🟠', '🎵', '🎶', '➕', '➖', '➗', '✖️', '♾️', '💲', '💱', '🌐', '♻️'];
+            var emojies = ['😀', '😆', '😅', '😂', '🤣', '😊', '😇', '😍', '🥰', '😉', '😘', '😚', '😋', '🤓', '🧐', '😎', '😏', '😒', '😞', '😔', '🥺', '😩', '😣', '😢', '😭', '😤', '😡', '🤬', '🤯', '🤲', '👐', '🙌', '👏', '🤑', '🤝', '👍', '👎', '👊', '✊', '🤛', '🤜', '🤞', '✌️', '🤟', '🤘', '👌', '🤏', '👈', '👉', '👆', '👇', '☝️', '✋', '🤚', '🤚', '🖐️', '🖖', '👋', '🤙', '💪', '🖕', '✍️', '🙏', '🦶', '🦵', '💋', '👩‍💻', '👨‍💻', '🙋‍♂️', '🙋', '🤦', '🤦‍♂️', '🤷‍♀️', '🤷‍♂️', '🚶‍♂️', '🏃', '👑', '🥂', '🎈', '🎉','🎊','🎃', '🚬', '🌈', '💐', '🌷', '🌹', '🥀', '🌺', '🌸', '💥', '🌼','🌻','🌞','🌝','🌛','🌜','🌚','🌕','🌖','🌗','🌘','🌑','🌒','🌓','🌔','🌙','🌎','🌍','🌏','💫','⭐️','🌟','✨','⚡️','☄️','💥','🔥','🌪','❄️','☃️','💧','💦', '🐵', '🙈', '🙉', '🙊', '🐒', '🐵', '🐸', '🍒', '🍑', '🥝', '🍌', '🍋', '🍳', '🥉', '🏅', '🎖️', '🥈', '🥇', '🚗', '🚕', '🚙', '🌠', '💊', '💉', '❤️', '🧡', '💛', '💚', '💙', '💜', '🖤', '🤎', '🤍', '💔', '❣️', '💕', '💞', '💓', '💗', '💖', '💘', '💝', '⌚', '📱', '📲', '💻', '⌨️', '🖥️', '🖨️', '🖱️', '🖲️', '🕹️', '🗜️', '💽', '💾', '💿', '📀', '📼', '📷', '📸', '📹', '🎥', '📽️', '🎞️', '📞', '☎️', '📟', '📠', '📺', '📻', '🎙️', '🎚️', '🎛️', '🧭', '⏱️', '⏲️', '⏰', '🕰️', '⌛', '📡', '🔋', '🔌', '💡', '🔦', '🕯️', '🧯', '🛢️', '💸', '💵', '💴', '💶', '💷', '💰', '🔞', '❗', '❕', '❓', '❔', '⚠️', '🔰', '✅', '🚫', '📛', '⛔', '❌', '💯', '⚪', '⚫', '🔴', '🔵', '🟤', '🟣', '🟢', '🟡', '🔺', '🟠', '🎵', '🎶', '➕', '➖', '➗', '✖️', '♾️', '💲', '💱', '🌐', '♻️'];
 
             const lang = {
                 en: {
@@ -635,8 +635,16 @@
             }
 
             if (status) {
-                $('<div id="main-gre-editor"><div id="lab"></div><textarea id="maincode" name="' + $(this).attr('name') + '"></textarea></div>').insertBefore($(this));
+                $('<div id="main-gre-editor"><div id="lab"></div><textarea id="maincode" name="' + $(this).attr('name') + '">'+$(this).html()+'</textarea></div>').insertBefore($(this));
                 $(this).remove();
+
+                var editorElement = $('#main-gre-editor');
+                var isParentSticky = false;
+                for (var x=0;x<=editorElement.parents().length;x++){
+                    if (editorElement.parents()[x] && editorElement.parents()[x].style && editorElement.parents()[x].style.position == 'sticky'){
+                        isParentSticky = true;
+                    }
+                }
 
                 $('#main-gre-editor').css('position', 'relative');
                 if (settings.lang == 'ar' || settings.lang == 'fa'){
@@ -735,7 +743,11 @@
                     $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="htmlbtn" title="'+langCore.viewpagesource+'"></a>');
                 }
                 if (settings.features.includes('fullscreen')) {
-                    $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="fullscreenbtn" title="'+langCore.fullscreenmode+'"></a>');
+                    if (!isParentSticky){
+                        $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="fullscreenbtn" title="'+langCore.fullscreenmode+'"></a>');
+                    }else{
+                        console.warn('GRE Editor\'s fullscreen feature cannot be working inside a parent element with "position:sticky;".');
+                    }
                 }
                 $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="infobtn" title="'+langCore.about+'"></a>');
 
@@ -1035,14 +1047,13 @@
                 $('#main-gre-editor').children('textarea').css('box-sizing', 'border-box');
                 $('#main-gre-editor').children('textarea').css('-webkit-box-sizing', 'border-box');
                 $('#main-gre-editor').children('textarea').css('font-family', 'sans-serif');
-                $('#main-gre-editor').children('textarea').css('font-size', '16px');
+                $('#main-gre-editor').children('textarea').css('font-size', '14px');
                 $('#main-gre-editor').children('textarea').css('outline', 'none');
                 $('#main-gre-editor').children('textarea').css('-webkit-outline', 'none');
                 $('#main-gre-editor').children('textarea').css('padding', '5px');
                 $('#main-gre-editor').children('textarea').css('border', 'unset');
                 $('#main-gre-editor').children('textarea').css('-webkit-border', 'unset');
                 $('#main-gre-editor').children('textarea').css('display', 'none');
-
                 $('#main-gre-editor').children('#lab').css('display', 'block');
                 $('#main-gre-editor').children('#lab').css('position', 'absolute');
                 $('#main-gre-editor').children('#lab').css('top', ($('#gre-editor-toolbar').height() + 22) + 'px');
@@ -1059,6 +1070,7 @@
                 $('#main-gre-editor').children('#lab').attr('contentEditable', true);
                 $('#main-gre-editor').children('#lab').focus();
 
+                $('#main-gre-editor').children('#lab').html(decodeHTML($('#maincode').html()));
 
 
                 $('#main-gre-editor').find('#boldbtn').click(() => {
@@ -1369,12 +1381,16 @@
                     hideAllMenues();
                 });
 
-                $('#main-gre-editor').children('#lab').bind("DOMSubtreeModified", function () {
+                $('#main-gre-editor').children('#lab').on('keyup keydown change DOMSubtreeModified', function () {
                     var myTextArea = document.getElementById('maincode');
                     myTextArea.innerHTML = $('#main-gre-editor').children('#lab').html();
                 });
 
-                // $('#main-gre-editor').find('#lab').on('keyup', (e) => {
+                $('#maincode').bind('input propertychange', (e) => {
+                    $('#main-gre-editor').children('#lab').html(document.getElementById('maincode').value);
+                });
+
+                // $('#main-gre-editor').find('#lab').on('keyup keydown change DOMSubtreeModified', (e) => {
                 //     var parent = document.getSelection().focusNode.parentElement.localName;
                 //     console.log(parent);
                 // });
@@ -2050,6 +2066,12 @@
                         }
                     }
                 }
+
+                function decodeHTML (html) {
+                    var txt = document.createElement('textarea');
+                    txt.innerHTML = html;
+                    return txt.value;
+                };
 
                 function getSelectionText() {
                     var text = "";
