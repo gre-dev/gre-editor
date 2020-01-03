@@ -7,7 +7,7 @@
         var settings = $.extend({
             width: 550,
             height: 300,
-            features: ['bold', 'italic', 'underline', 'textcolor','strikethrough'],
+            features: ['bold', 'italic', 'underline', 'textcolor','strikethrough','alignLeft','alignCenter','alignRight'],
             forceAlt: false,
             forceLinkTitle: false,
             lang: 'en',
@@ -698,10 +698,10 @@
                 if (settings.features.includes('textColor')) {
                     $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="textcolorbtn" title="'+langCore.textcolor+'"><div id="textcolordropdown"></div></a>');
                 }
-                if (settings.features.includes('list')) {
+                if (settings.features.includes('unorderedList')) {
                     $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="listbtn" title="'+langCore.unorderedlist+'"></a>');
                 }
-                if (settings.features.includes('numberlist')) {
+                if (settings.features.includes('orderedList')) {
                     $('#main-gre-editor').children('#gre-editor-toolbar').append('<a href="javascript:void(0)" id="numberlistbtn" title="'+langCore.orderedlist+'"></a>');
                 }
                 if (settings.features.includes('link')) {

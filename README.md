@@ -102,7 +102,7 @@ You can use the following options as you need:
 |--|--|--|--|
 | width | Integer | 550 | The width of the editor (in pixels).
 | height | Integer | 300 | The height of the editor (in pixels).
-| features | Array | ['bold',  'italic',  'underline',  'textcolor','strikethrough'] | The features of editor.<br>You can use the available features in the list below.
+| features | Array | ['bold', 'italic', 'underline', 'textcolor','strikethrough','alignLeft','alignCenter','alignRight'] | The features of editor.<br>You can use the available features in the list below.
 | forceAlt | Boolean | false | Force users to write an "alt" for the inserted images.
 | forceLinkTitle | Boolean | false | Force users to write a "title" for the inserted link.
 | lang | String | 'en' | The language of editor (Check the language section below).
@@ -117,8 +117,8 @@ You can add the following features to the "features" array:
 - underline
 - heading
 - strikeThrough
-- list
-- numberlist
+- unorderedList
+- orderedList
 - increaseFontSize
 - decreaseFontSize
 - quote
