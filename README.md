@@ -5,6 +5,7 @@
 
 ## Introduction
 It's a lightweight and full cusomizable WYSIWYG text editor built in Javascript & jQuery.
+
 <br>
 
 ## Features
