@@ -1,6 +1,6 @@
 # GRE Editor (JS)
 
-![](https://lh3.googleusercontent.com/E7jYw1ML30w3JGfU5S6Mm7JXUd2-gLSHL4iZ_6r5yLyuyMKpFLDweN1dcfSfIWKHBgN4a8SfR2Vh4IwNc3zS=w1600-h789)
+![](https://raw.githubusercontent.com/gre-dev/gre-editor/master/header.jpg)
 
 <br><br>
 
