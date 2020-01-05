@@ -119,13 +119,13 @@ You can use the following shortcuts to do some operations easly:
 ## Features
 You can add the following features to the "features" array:
 
+- heading
 - bold
 - italic
 - underline
-- heading
 - strikeThrough
-- list
-- numberlist
+- unorderedList
+- orderedList
 - increaseFontSize
 - decreaseFontSize
 - quote
@@ -138,12 +138,12 @@ You can add the following features to the "features" array:
 - alignLeft
 - alignCenter
 - alignRight
+- justify
 - textBackColor
 - textColor
 - emoji
 - table
 - pageSource
-- justify
 - hr
 - insertHTML
 - darkMode
