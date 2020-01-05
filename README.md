@@ -75,6 +75,47 @@ You can use the following options as you need:
 
 <br>
 
+## Keyboard Shortcuts
+You can use the following shortcuts to do some operations easly:
+
+### Special Shortcuts
+| Shortcut | Operation
+|--|--|
+| Ctrl+B <br> ⌘+B | Bold selected text.
+| Ctrl+I <br> ⌘+I | Make the selected text in *Italic* form.
+| Ctrl+U <br> ⌘+U | Underline selected text.
+| Ctrl+S <br> ⌘+S | Strike Through selected text.
+| Ctrl+K <br> ⌘+K | Coverts text into a link.
+| Ctrl+P <br> ⌘+P | Insert an image.
+| Tab | Indent a list.
+| Shift+Tab | Outdent a list.
+| Esc | Closes a GRE Editor dialog window or drop-down list. Equivalent to the Cancel button in a dialog window. Or exit Fullscreen Mode.
+| Ctrl+Shift+S <br> ⌘+Shift+S | Stores the full editor content.
+| Ctrl+Shift+L <br> ⌘+Shift+L | Restores the latest editor content stored.
+
+<br>
+
+### Basic Shortcuts
+| Shortcut | Operation
+|--|--|
+| Ctrl+A <br> ⌘+A | Selects all editor contents.
+| Ctrl+C <br> ⌘+C | Copy selected text.
+| Ctrl+X <br> ⌘+X <br> Shift+Del | Cut selected text.
+| Ctrl+V <br> ⌘+V <br> Shift+Insert | Paste copied/cutted text.
+| Ctrl+Z <br> ⌘+Z | Performs the undo operation.
+| Ctrl+Shift+Z <br> Ctrl+Y <br> ⌘+Shift+Z <br> ⌘+Y | Performs the redo operation.
+| Shift+Arrow | Selects a text fragment by letters.
+| Ctrl+Shift+Arrow <br> ⌘+Shift+Arrow | Selects a text fragment by words.
+| Shift+Home | Selects a text fragment from the cursor to the beginning of the line.
+| Shift+End | Selects a text fragment from the cursor to the end of the line.
+| Ctrl+Shift+Home <br> ⌘+Shift+Home | Selects a text fragment from the cursor to the beginning of the document.
+| Ctrl+Shift+End <br> ⌘+Shift+End | Selects a text fragment from the cursor to the end of the document.
+| Shift+PgDn | Selects a text fragment of approximately the length of the editing area starting from the cursor and going down.
+| Shift+PgUp | Selects a text fragment of approximately the length of the editing area starting from the cursor and going up.
+
+
+<br>
+
 ## Features
 You can add the following features to the "features" array:
 

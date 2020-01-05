@@ -2,7 +2,7 @@
     var usable = true;
     $.fn.greEditor = function (options) {
 
-        if (!localStorage.getItem('GRE-Editor-Storage1')) localStorage.setItem('GRE-Editor-Storage1', '');
+        if (!localStorage.getItem('GRE-Editor-Storage')) localStorage.setItem('GRE-Editor-Storage', '');
 
         var settings = $.extend({
             width: 550,
@@ -2669,18 +2669,52 @@
 
     };
 
-    $(window).bind('keydown', function (e) {
-        if (e.keyCode == 13) {
-            if ($('#main-gre-editor').is(':focus')) {
-                e.preventDefault();
-                document.execCommand('insertText', false, '\n');
-                return false;
-            }
-        }
-    });
 
-    $(window).bind('keydown keypress', function (e) {
-        if (e.keyCode == 9) {
+
+    $(window).bind('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && String.fromCharCode(e.which).toLowerCase() == 's'){
+            if ($('#main-gre-editor').find('#lab').is(':focus')) {
+                e.preventDefault();
+                if ($('#main-gre-editor').find('.gre-checkmark').length < 1){
+                    var encodedTextarea = window.btoa($('#main-gre-editor').children('#maincode').val());
+                    localStorage.setItem('GRE-Editor-Storage', encodedTextarea);
+                    var saveRand = Math.floor(Math.random() * 1001);
+                    $('#main-gre-editor').append('<div class="gre-checkmark" data-num="'+saveRand+'"></div>')
+                    $('#main-gre-editor').find('.gre-checkmark[data-num="'+saveRand+'"]').show(120).delay(1800).hide(100);
+                    setTimeout(function(){
+                        $('#main-gre-editor').find('.gre-checkmark[data-num="'+saveRand+'"]').remove();
+                    }, 2250);
+                }
+            }
+        }else if ((e.ctrlKey || e.metaKey) && e.shiftKey && String.fromCharCode(e.which).toLowerCase() == 'l'){
+            if ($('#main-gre-editor').find('#lab').is(':focus')) {
+                e.preventDefault();
+                var decodedText = window.atob(localStorage.getItem('GRE-Editor-Storage'));
+                $('#main-gre-editor').children('#maincode').val(decodedText);
+                $('#main-gre-editor').children('#lab').html($('#main-gre-editor').children('#maincode').val());
+            }
+        }else if (e.ctrlKey || e.metaKey) {
+            if ($('#main-gre-editor').find('#lab').is(':focus')) {
+                switch (String.fromCharCode(e.which).toLowerCase()) {
+                    case 's':
+                        e.preventDefault();
+                        $('#main-gre-editor').find('#strikethroughbtn').click();
+                        break;
+                    case 'p':
+                        e.preventDefault();
+                        $('#main-gre-editor').find('#insertimagebtn').click();
+                        break;
+                    case 'k':
+                        e.preventDefault();
+                        $('#main-gre-editor').find('#linkbtn').click();
+                        break;
+                    case 'f':
+                        e.preventDefault();
+                        $('#main-gre-editor').find('#fullscreenbtn').click();
+                        break;
+                }
+            }
+        }else if (e.keyCode == 9) {
             if ($('#main-gre-editor').find('#lab').is(':focus')) {
                 e.preventDefault();
                 if (e.shiftKey) {
@@ -2690,51 +2724,27 @@
                 }
                 return false;
             }
+        }else if (e.keyCode == 13) {
+            if ($('#main-gre-editor').is(':focus')) {
+                e.preventDefault();
+                document.execCommand('insertText', false, '\n');
+                return false;
+            }
+        }else if (e.keyCode == 27) {
+            console.log(1);
+            e.preventDefault();
+            $('#main-gre-editor').children('#gre-editor-toolbar').children('#headingdropdown').hide(1);
+            $('#main-gre-editor').children('#gre-editor-toolbar').find('#tabledropdown').hide(1);
+            $('#main-gre-editor').children('#gre-editor-toolbar').find('#emojidropdown').hide(1);
+            $('#main-gre-editor').children('#gre-editor-toolbar').find('#textcolordropdown').hide(1);
+            $('#main-gre-editor').children('#gre-editor-toolbar').find('#backgroundcolordropdown').hide(1);
+            $('#main-gre-editor').children('#main-gre-insert-image').hide(1);
+            $('#main-gre-editor').children('#main-gre-insert-link').hide(1);
+            $('#main-gre-editor').children('#main-gre-insert-html').hide(1);
+            $('#main-gre-editor').children('#main-gre-insert-video').hide(1);
+            $('#main-gre-editor').children('#gre-blur').hide(1);
+            return false;
         }
-    });
-
-    $(window).bind('keydown', function (event) {
-        if ((event.ctrlKey || event.metaKey) && event.shiftKey && String.fromCharCode(event.which).toLowerCase() == 's'){
-            if ($('#main-gre-editor').find('#lab').is(':focus')) {
-                event.preventDefault();
-                var encodedTextarea = window.btoa($('#main-gre-editor').children('#maincode').val());
-                localStorage.setItem('GRE-Editor-Storage1', encodedTextarea);
-                var saveRand = Math.floor(Math.random() * 1001);
-                $('#main-gre-editor').append('<div class="gre-checkmark" data-num="'+saveRand+'"></div>')
-                $('#main-gre-editor').find('.gre-checkmark[data-num="'+saveRand+'"]').show(120).delay(2000).hide(120);
-                setTimeout(function(){
-                    $('#main-gre-editor').find('.gre-checkmark[data-num="'+saveRand+'"]').remove();
-                }, 2270);
-            }
-        }else if ((event.ctrlKey || event.metaKey) && event.shiftKey && String.fromCharCode(event.which).toLowerCase() == 'r'){
-            if ($('#main-gre-editor').find('#lab').is(':focus')) {
-                event.preventDefault();
-                var decodedText = window.atob(localStorage.getItem('GRE-Editor-Storage1'));
-                $('#main-gre-editor').children('#maincode').val(decodedText);
-                $('#main-gre-editor').children('#lab').html($('#main-gre-editor').children('#maincode').val());
-            }
-        }else if (event.ctrlKey || event.metaKey) {
-            if ($('#main-gre-editor').find('#lab').is(':focus')) {
-                switch (String.fromCharCode(event.which).toLowerCase()) {
-                    case 's':
-                        event.preventDefault();
-                        $('#main-gre-editor').find('#strikethroughbtn').click();
-                        break;
-                    case 'p':
-                        event.preventDefault();
-                        $('#main-gre-editor').find('#insertimagebtn').click();
-                        break;
-                    case 'k':
-                        event.preventDefault();
-                        $('#main-gre-editor').find('#linkbtn').click();
-                        break;
-                    case 'f':
-                        event.preventDefault();
-                        $('#main-gre-editor').find('#fullscreenbtn').click();
-                        break;
-                }
-            }
-        } 
     });
 
 }(jQuery));
