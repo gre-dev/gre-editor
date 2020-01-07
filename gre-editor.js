@@ -94,8 +94,7 @@
                     darkmode: 'Dark Mode',
                     lightmode: 'Light Mode',
                     inserthtmlcode: 'Insert HTML Code',
-                    pastethecodehere: 'Paste the code here',
-                    editLink: 'Edit Link'
+                    pastethecodehere: 'Paste the code here'
                 },
                 ar: {
                     heading: 'عنوان',
@@ -1717,7 +1716,6 @@
                 $('#main-gre-editor').find('#edit-link').css('padding', '15px');
                 $('#main-gre-editor').find('#edit-link').css('box-sizing', 'border-box');
                 $('#main-gre-editor').find('#edit-link').css('-webkit-box-sizing', 'border-box');
-                $('#main-gre-editor').find('#edit-link').append('<div style="color:#333;font-size:20px;font-family:sans-serif;">' + langCore.editLink + '</div>');
                 $('#main-gre-editor').find('#edit-link').append('<input type="text" id="edit-link-url" style="font-family:sans-serif;color:#333;font-size:16px;font-family:sans-serif;padding:4px;border-radius:3px;-webkit-border-radius:3px;border:1px solid #aaa;margin-top:6px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;-webkit-box-sizing:border-box;" placeholder="' + langCore.url + '">');
                 $('#main-gre-editor').find('#edit-link').append('<input type="text" id="edit-link-title" style="font-family:sans-serif;color:#333;font-size:16px;font-family:sans-serif;padding:4px;border-radius:3px;-webkit-border-radius:3px;border:1px solid #aaa;margin-top:6px;width:100%;outline:none;-webkit-outline:none;appearance:none;-webkit-appearance:none;box-sizing:border-box;-webkit-box-sizing:border-box;" placeholder="' + langCore.title + '">');
 
