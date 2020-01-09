@@ -1736,10 +1736,12 @@
                             var href = document.getSelection().focusNode.parentElement.href;
                             var title = document.getSelection().focusNode.parentElement.title;
 
+                            console.log(document.getSelection());
+
                             if (settings.lang == 'ar' || settings.lang == 'fa'){
-                                var right = width/2;
+                                var left = (document.getSelection().focusNode.parentElement.offsetLeft + 20) + width/3;
                                 $('#main-gre-editor').find('#edit-link').css('top',top+'px');
-                                $('#main-gre-editor').find('#edit-link').css('right',right+'px');
+                                $('#main-gre-editor').find('#edit-link').css('left',left+'px');
                             }else{
                                 var left = (document.getSelection().focusNode.parentElement.offsetLeft + 20) + width/3;
                                 $('#main-gre-editor').find('#edit-link').css('top',top+'px');
@@ -2754,7 +2756,8 @@
             if ($('#main-gre-editor').find('#lab').is(':focus')) {
                 e.preventDefault();
                 if ($('#main-gre-editor').find('.gre-checkmark').length < 1){
-                    var encodedTextarea = window.btoa($('#main-gre-editor').children('#maincode').val());
+                    var encodedTextarea = btoa(unescape(encodeURIComponent($('#main-gre-editor').children('#maincode').val())));
+                    
                     localStorage.setItem('GRE-Editor-Storage', encodedTextarea);
                     var saveRand = Math.floor(Math.random() * 1001);
                     $('#main-gre-editor').append('<div class="gre-checkmark" data-num="'+saveRand+'"></div>')
@@ -2767,7 +2770,7 @@
         }else if ((e.ctrlKey || e.metaKey) && e.shiftKey && String.fromCharCode(e.which).toLowerCase() == 'l'){
             if ($('#main-gre-editor').find('#lab').is(':focus')) {
                 e.preventDefault();
-                var decodedText = window.atob(localStorage.getItem('GRE-Editor-Storage'));
+                var decodedText = decodeURIComponent(escape(window.atob(localStorage.getItem('GRE-Editor-Storage'))));
                 $('#main-gre-editor').children('#maincode').val(decodedText);
                 $('#main-gre-editor').children('#lab').html($('#main-gre-editor').children('#maincode').val());
             }
@@ -2784,7 +2787,20 @@
                         break;
                     case 'k':
                         e.preventDefault();
-                        $('#main-gre-editor').find('#linkbtn').click();
+                        $('#main-gre-editor').children('#gre-blur').show(1);
+                        $('#main-gre-editor').children('#main-gre-insert-link').slideToggle(100);
+                        var rand = Math.floor(Math.random() * 1001);
+                        var selected = getSelection();
+                        lastSelectedText = getSelectionText().toString();
+                        var range = selected.getRangeAt(0);
+                        if (selected.toString().length > 1) {
+                            var newNode = document.createElement("span");
+                            newNode.setAttribute("id", 'link-place-' + rand);
+                            newNode.value = lastSelectedText;
+                            range.surroundContents(newNode);
+                        }
+                        selected.removeAllRanges();
+                        lastLinkNode = rand;
                         break;
                     case 'f':
                         e.preventDefault();
